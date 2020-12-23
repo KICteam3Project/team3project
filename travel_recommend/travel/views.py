@@ -84,7 +84,7 @@ def LoginFunc(request):
         return render(request, 'index.html', {'error' : ss})
     
     for user in tusers:
-        print(user.user_pwd)
+        #print(user.user_pwd)
         if user.user_pwd != pwd:
             return render(request, 'index.html')
         
@@ -92,7 +92,7 @@ def LoginFunc(request):
         return redirect('main') # urls에 name값 할당
         
 def LogoutFunc(request):
-    print(request.session.get('user'))
+    #print(request.session.get('user'))
     if request.session.get('user'):
         del(request.session['user'])
     #print(request.session.get('user')) # 세션 삭제된것 확인
@@ -102,7 +102,7 @@ def LogoutFunc(request):
 >>>>>>> branch 'main' of https://github.com/KICteam3Project/team3project.git
 def MainFunc(request):
     user_log = request.session.get('user')
-    print(user_log) # 세션 값 = 사용자 이름
+    #print(user_log) # 세션 값 = 사용자 이름
     
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,7 +123,7 @@ def SearchFunction(request):
         weather = 'rainy'
 =======
         user_log = request.session.get('user')
-        print(user_log) # 세션 값 = 사용자 이름
+        #print(user_log) # 세션 값 = 사용자 이름
         #print(search)
 >>>>>>> refs/heads/main
 =======
@@ -297,6 +297,7 @@ def SearchFunction(request):
 =======
 >>>>>>> branch 'main' of https://github.com/KICteam3Project/team3project.git
 
+<<<<<<< HEAD
         root = ['루트1', '루트2', '루트3', '루트4', '루트5']
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -309,9 +310,12 @@ def SearchFunction(request):
 <<<<<<< HEAD
         restaurant = ['음식점1', '음식점2', '음식점3', '음식점4', '음식점5']
 =======
+=======
+>>>>>>> f751ae8077972b63d45bce5c75f5f604165c25c7
         tour = ['여행지1', '여행지2', '여행지3', '여행지4', '여행지5']
 >>>>>>> refs/heads/main
         
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         context={'travel':search, 'start':start_date, 'end':end_date, 'weather':weather, 'root':root, 'tour':tour, 'restaurant':restaurant}
@@ -324,6 +328,9 @@ def SearchFunction(request):
         context={'travel':search, 'start':start_date, 'end':end_date, 'weather': wlist, 'root':root, 'tour':tour, \
                   'user_log' : user_log}
 >>>>>>> branch 'main' of https://github.com/KICteam3Project/team3project.git
+=======
+        context={'travel':search, 'start':start_date, 'end':end_date, 'weather': wlist, 'tour':tour, 'user_log' : user_log}
+>>>>>>> f751ae8077972b63d45bce5c75f5f604165c25c7
         return render(request, 'main.html', context)
 <<<<<<< HEAD
 <<<<<<< HEAD
