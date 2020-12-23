@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from travel import views
+from recommend_app import views
+from recommend_app import cal_knn
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +30,6 @@ urlpatterns = [
     path('detail', views.DetailFunction),
     path('signup', views.SignupFunction),
     path('signup2', views.SignupFunction2),
+    path('cal_svd', recommend_app.views.Cal_Svd),
+    path('cal_svd', recommend_app.cal_knn.Cal_Knn),
 ]
