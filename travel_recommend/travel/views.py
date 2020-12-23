@@ -328,9 +328,12 @@ def SearchFunction(request):
         context={'travel':search, 'start':start_date, 'end':end_date, 'weather': wlist, 'root':root, 'tour':tour, \
                   'user_log' : user_log}
 >>>>>>> branch 'main' of https://github.com/KICteam3Project/team3project.git
+<<<<<<< HEAD
 =======
         context={'travel':search, 'start':start_date, 'end':end_date, 'weather': wlist, 'tour':tour, 'user_log' : user_log}
 >>>>>>> f751ae8077972b63d45bce5c75f5f604165c25c7
+=======
+>>>>>>> refs/heads/dev
         return render(request, 'main.html', context)
 <<<<<<< HEAD
 <<<<<<< HEAD
